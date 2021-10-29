@@ -3,7 +3,7 @@ Creare una funzione per capire se la parola inserita è palindroma.
 Dare l’output relativo. */
 
 // chiedo di inserire una parola "x"
-const wordUser = prompt("Inserisci una parola")
+const wordUser = prompt("Inserisci una parola");
 //tramite la funzione che mi sono creato confronto la parola dell'utente con quella che ricavo dalla funzione
 // se sono uguli è palindroma
 if(wordUser === invertOrder(wordUser)){
