@@ -52,7 +52,7 @@ function numEven(numF){
 
 
 //console log per un riscontro in pagina
-console.log("l'utente ha scelto: ", choiseUser);
+console.log("l'utente ha scelto: (se è true ha scelto pari se è false ha scelto dispari)", choiseUser);
 console.log("numero utente", numUser);
 console.log("numero cpu",numCpu );
 console.log("la somma è:", sum);
