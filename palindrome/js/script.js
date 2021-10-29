@@ -3,21 +3,27 @@ Creare una funzione per capire se la parola inserita è palindroma.
 Dare l’output relativo. */
 
 // chiedo di inserire una parola "x"
-const wordUser = prompt("Inserisci una parola");
-//tramite la funzione che mi sono creato confronto la parola dell'utente con quella che ricavo dalla funzione
-// se sono uguli è palindroma
-if(wordUser === invertOrder(wordUser)){
-    console.log("la parola è palindroma");
-//altrimenti non lo è
-} else {
-    console.log("la parola non è palindroma");
-}
-console.log(invertOrder(wordUser));
+const wordUser = [prompt("Inserisci una parola")]
+// tramite la funzione controllo se la parola è palindroma
+const checkPal = checkPalindrome(wordUser);
 
-
+console.log(checkPal);
 
 //funzioni utili 
-function invertOrder(word) {
-    return word.split("").reverse().join("");                  /* split scompone la variabile in stringhe, reverse inverte l'ordine delle lettere, join salva la parola con ordine invertito */
+// il programma controlla se la parola è polindroma o no
+
+function checkPalindrome(string) {
+
+    // trova la lunghezza di una stringa
+    const len = string.length;
+
+    // passo attraverso meta della stringa
+    for (let i = 0; i < len / 2; i++) {
+
+        // controllo se la prima meta della stringa è uguale alla seconda metà
+        if (string[i] !== string[len - 1 - i]) {
+            return 'non è palindroma';
+        }
+    }
+    return 'è palindroma';
 }
- 
